@@ -1,33 +1,33 @@
-var ALL_OF_STARS = 150;          // csillagok száma
-var SCREEN_WIDTH = 600;          // képernyő szélessége
-var SCREEN_HEIGHT = 896;         // képernyő magassága
-var MAX_SPEED = 5;               // csillagok maximális sebessége
-var stars = Array(ALL_OF_STARS); // csillagok adattömbje
+var ALL_OF_STARS = 150;          // number of stars
+var SCREEN_WIDTH = 600;          // width of the screenplay 
+var SCREEN_HEIGHT = 860;         // height of the scrrenplay
+var MAX_SPEED = 5;               // max speed of stars
+var stars = Array(ALL_OF_STARS); // array of stars data
 var spaceShip;
 
 
 function setup() {
    createCanvas(SCREEN_WIDTH, SCREEN_HEIGHT);
    frameRate(60);
-   // csillagok kezdő adatfeltöltése
+   // initializing stars
    for (let i = 0; i < ALL_OF_STARS; i++) {
       stars[i] = new Star();
    }
-   // űrhajó létrehozása
+   // create the player's spaceship
    spaceShip = new SpaceShip();
 }
 
 
 function draw() {
    background(0);
-   // csillagok mozgatása és kirajzolása
+   // moving stars
    for (let i = 0; i < ALL_OF_STARS; i++) {
       stars[i].move();
       stars[i].display();
    }
-   // űrhajó kirajozolása
+   // drawing player's space ship
    spaceShip.display();
-   // irányítás
+   // controll the game
    control();
 }
 

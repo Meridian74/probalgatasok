@@ -1,9 +1,9 @@
 class Star {
    constructor() {
-      this.x = random(SCREEN_WIDTH);      // X koordináta
-      this.y = random(SCREEN_HEIGHT);     // X koordináta
-      this.speed = random(MAX_SPEED) + 3; // sebesség (lépés)
-      this.color = 50 + MAX_SPEED * 40;   // fényesség
+      this.x = random(SCREEN_WIDTH);      // Y coord
+      this.y = random(SCREEN_HEIGHT);     // X coord
+      this.speed = random(MAX_SPEED) + 3; // stepping speed
+      this.color = 50 + MAX_SPEED * 40;   // bright
    }
    
    move() {

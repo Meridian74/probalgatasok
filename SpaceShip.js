@@ -1,10 +1,10 @@
 class SpaceShip {
    constructor() {
-      this.numberOfLife = 5;                          // életek száma
-      this.posX = SCREEN_WIDTH / 2 - 32;              // kezdő pozició középen
+      this.numberOfLife = 5;                          // number of lifes
+      this.posX = SCREEN_WIDTH / 2 - 32;              // star pisition is in center
       this.posY = SCREEN_HEIGHT - 64 - 24;      
-      this.movSpeed = 4;                              // űrhajó mozgatási sebessége
-      this.img = loadImage("pics/space-ship-01.png"); // űrhajó rajza
+      this.movSpeed = 4;                              // spaceship's moving speed
+      this.img = loadImage("pics/space-ship-01.png"); // spaceship's image
    }
 
    move(direction) {
